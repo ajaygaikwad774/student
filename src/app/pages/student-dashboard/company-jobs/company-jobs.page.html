@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Jobs</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button [routerLink]="['/student/feeds']">
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+        <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+  <ion-grid class="ion-no-margin ion-no-padding">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card *ngFor="let i of [1,2,3,4]"
+          style="padding: 7px; border-radius: 5px;  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);   transition: 0.3s;">
+          <ion-card-header>
+            <ion-card-title
+              style="font-weight: bold;; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              Front End
+              Developer</ion-card-title>
+            <ion-card-subtitle>Tata Consulting Services</ion-card-subtitle>
+            <ion-card-subtitle>Thane, Maharashtra</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+
+            <ion-label>
+              <p>
+                <ion-icon slot="start" name="send-sharp" color="primary"></ion-icon>
+                Apply with your resume
+              </p>
+
+            </ion-label>
+            <ion-label>
+              <p>
+                <ion-icon name="at-circle-outline" color="primary" slot="start"></ion-icon>
+                Be an early applicant
+              </p>
+            </ion-label>
+            <br />
+            <ion-card-subtitle
+              style="font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif!important">
+              3
+              days
+              ago</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

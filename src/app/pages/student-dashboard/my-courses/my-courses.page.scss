@@ -1,0 +1,20 @@
+.course-thumbnail {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.course-progress {
+    margin: 8px 0 0;
+    color: var(--ion-color-medium);
+
+    ion-progress-bar {
+        margin-bottom: 4px;
+    }
+}
+
+#notifications-badge {
+    position: absolute;
+    top: -0.4rem;
+    right: -0.3rem;
+    opacity: 0.9;
+}
