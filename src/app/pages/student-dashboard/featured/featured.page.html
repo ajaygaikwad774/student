@@ -2,12 +2,12 @@
   <ion-toolbar color="primary">
     <ion-title>Featured</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="toggleSearch()">
-        <ion-icon slot="icon-only" name="search"></ion-icon>
-      </ion-button>
       <ion-button [routerLink]="['/student/feeds']">
         <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
         <ion-badge id="notifications-badge" color="danger">5</ion-badge>
+      </ion-button>
+      <ion-button [routerLink]="['/student/cart']">
+        <ion-icon slot="icon-only" name="cart-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -40,7 +40,7 @@
     </ion-list-header>
     <div class="scroll-horizontal">
       <div class="scroll-item" *ngFor="let i of [1,2,3]">
-        <div class="course-item" routerLink="/course-detail">
+        <div class="course-item" routerLink="/student/course-detail">
           <div class="bg-image" [style.backgroundImage]="'url(assets/img/img_' + i + '.png)'"></div>
           <div>
             <strong>The Complete Digital Marketing Course - 12 Courses in 1</strong>
@@ -77,7 +77,7 @@
     </ion-list-header>
     <div class="scroll-horizontal">
       <div class="scroll-item" *ngFor="let i of [1,2,3,4]">
-        <div class="course-item course-item-sm" routerLink="/course-detail">
+        <div class="course-item course-item-sm" routerLink="/student/course-detail">
           <div class="bg-image" [style.backgroundImage]="'url(assets/img/img_' + i + '.png)'"></div>
           <div>
             <strong>The Complete Digital Marketing Course - 12 Courses in 1</strong>

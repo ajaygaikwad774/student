@@ -55,10 +55,6 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'feeds',
-        loadChildren: () => import('./notify/notify.module').then(m => m.NotifyPageModule)
-      },
-      {
         path: '',
         redirectTo: '/student/featured',
         pathMatch: 'full'
@@ -66,9 +62,21 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'student/feeds',
+    loadChildren: () => import('./notify/notify.module').then(m => m.NotifyPageModule)
+  },
+  {
     path: '',
     redirectTo: '/student/featured',
     pathMatch: 'full'
+  },
+  {
+    path: 'student/cart',
+    loadChildren: () => import('./cart/cart.module').then(m => m.CartPageModule)
+  },
+  {
+    path: 'student/course-detail',
+    loadChildren: () => import('./course-detail/course-detail.module').then(m => m.CourseDetailPageModule)
   }
 
 
